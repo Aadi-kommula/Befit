@@ -1,0 +1,146 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.bmi{
+    width:50%;
+    height: 100vh;
+    background-color: #fff;
+    padding: 5%;
+    h1{
+        color:#129e2c;
+        font-size: 28px;
+        margin: 15px 0px;
+    }
+    h2{
+        font-size: 20px;
+        font-weight: 500;
+    }
+    Button{
+        margin: 20px 0px;
+        background-color: #129e2c;
+        font-weight: 550;
+    }
+}
+
+h1, h2, p, h3, h4, h5, h6{
+    color: black;
+}
+
+#inp{
+    width:330px;
+    background-color: green;
+}
+
+.second{
+    width:50%;
+    height: 100vh;
+    background-color: rgb(246, 244, 240);
+}
+
+
+.bmi_first{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: start;
+}
+.min_max {
+    width: 325px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    margin: 3px 0px;
+}
+.value_box{
+   border: 1px solid black;
+   padding: 5px 10px;
+   border-radius: 2.5px;  
+   
+}
+input[type='range']{
+    border-radius: 20px;
+    
+}
+/* Style the range input track */
+input[type="range"] {
+    -webkit-appearance: none; /* Remove default styling */
+    appearance: none;
+    background: transparent; /* Make the track transparent */
+    width: 100%; /* Full width */
+}
+
+/* Style the range input track in WebKit browsers */
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 14px; /* Height of the track */
+    background: #129e2c; /* Green color for the track */
+    border-radius: 15px; /* Rounded corners */
+}
+
+/* Style the range input track in Mozilla Firefox */
+input[type="range"]::-moz-range-track {
+    height: 14px; /* Height of the track */
+    background: #129e2c; /* Green color for the track */
+    border-radius: 15px; /* Rounded corners */
+}
+
+/* Style the range input thumb (adjustable point) in WebKit browsers */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove default styling */
+    appearance: none;
+    width: 20px; /* Width of the thumb */
+    height: 21px; /* Height of the thumb */
+    background: white; /* White color for the thumb */
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.282); /* Green border around the thumb */
+    border-radius: 50%; /* Make the thumb circular */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: -6px; /* Center the thumb vertically */
+}
+
+/* Style the range input thumb (adjustable point) in Mozilla Firefox */
+input[type="range"]::-moz-range-thumb {
+    width: 20px; /* Width of the thumb */
+    height: 201x; /* Height of the thumb */
+    background: white; /* White color for the thumb */
+    border-radius: 50%; /* Make the thumb circular */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* bmi result css */
+.bmi_stats{
+    h1, h2{
+        display: inline;
+    }
+    h2{
+        margin: 0px;
+        font-size: 23px;
+    }
+    h1{
+        margin: 3px 0px;
+        color: #000;
+        font-weight: 600;
+    }
+}
+
+
+
+
+
+
+/* mobile csss1 */
+@media  screen and (max-width:600px) {
+    .container{
+        display: block;
+    }
+    .bmi{
+        width: 100vw;
+    }
+    .second{
+        width: 100vw;
+    }
+}
