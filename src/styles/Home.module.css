@@ -1,9 +1,10 @@
 .container{
     width: 100vw;
     height: 100vh;
-    background-color: black;
+    background-color: #fff;
     display: flex;
     flex-wrap: wrap;
+   
 }
 
 
@@ -21,12 +22,21 @@
         font-size: 20px;
         font-weight: 500;
     }
+   
+    img{
+        position: relative;
+        top:-440px;
+        left:260px;
+        width:400px;
+        z-index: 0;
+    }
     Button{
         margin: 20px 0px;
         background-color: #129e2c;
-        font-weight: 550;
+        font-weight: 500;
     }
 }
+
 
 h1, h2, p, h3, h4, h5, h6{
     color: black;
@@ -39,9 +49,13 @@ h1, h2, p, h3, h4, h5, h6{
 
 .second{
     width:50%;
-    height: 100vh;
-    background-color: rgb(246, 244, 240);
+    height: 80vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
+
 
 
 .bmi_first{
@@ -125,8 +139,37 @@ input[type="range"]::-moz-range-thumb {
         color: #000;
         font-weight: 600;
     }
+    p{
+        font-size: 20px;
+       margin: 5px 0px;
+    }
 }
 
+.second_content{
+    background-color: #d2f0e4a7;
+    padding: 60px;
+    border-top-right-radius: 110px;
+    border-bottom-left-radius: 110px;
+    box-shadow: 5px 3px 13px rgba(0, 0, 0, 0.212);
+h2{
+    color:#129e2c;
+}
+Button{
+    margin: 10px 0px;
+    background-color: #129e2c;
+    font-weight: 500;
+}
+a{
+    display: block;
+    color: #129e2c;
+}
+}
+
+.second_content:hover{
+    transition: all 0.2s ease-in-out;
+    box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.301);
+
+}
 
 
 
@@ -136,11 +179,28 @@ input[type="range"]::-moz-range-thumb {
 @media  screen and (max-width:600px) {
     .container{
         display: block;
+        padding-left: 10px;
     }
     .bmi{
         width: 100vw;
+        height: 40%;
+        img{
+            position: relative;
+            top:-410px;
+            left:130px;
+            width:340px;
+            z-index: 0;
+        }
     }
     .second{
         width: 100vw;
     }
+    #inp{
+        width:200px;
+        background-color: green;
+    }
+    .min_max {
+        width: 200px;
+    }
+    
 }

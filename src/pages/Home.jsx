@@ -1,6 +1,8 @@
 import React, { use, useState } from 'react'
 import style from '../styles/Home.module.css'
 import Button from '@mui/material/Button';
+import fit from '/assets/fit.png'
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
 
@@ -9,6 +11,7 @@ const Home = () => {
   const [inch, setInch] = useState(5)
   const [bmi, setBmi] = useState(0)
   const [bmiresult, setBmiResult] = useState()
+  const Navigate=useNavigate()
 
 
   const calcBMI = () => {
@@ -18,6 +21,15 @@ const Home = () => {
     let w = parseInt(weight)
     let result = w / (height * height)
     setBmi(result.toFixed(2))
+    if(result<18.5){
+      setBmiResult("You are Underweight")
+    }
+    else if(result>18.5 && result<25){
+      setBmiResult("You are Normal")
+    }
+    else if(result>25){
+      setBmiResult("You are Overweight")
+      }
   }
 
 
@@ -83,17 +95,29 @@ const Home = () => {
           <div className={style.bmi_stats}>
             <h2>Body Mass Index : </h2>
             <h1> &nbsp;{bmi}</h1>
+            <br/>
            <p>{bmiresult}</p>
           </div>
+          <img src={fit} alt="image" />
         </div>
         
         {/* resgistration page */}
         <div className={style.second}>
-
+            <div className={style.second_content}>
+            <h2>Continue to Application</h2><br/>
+            <Button
+            variant='contained' 
+            color='success'
+            onClick={()=>{
+              Navigate('/Registration')
+            }}
+            >Register</Button>
+            <a href="/Login">Already have an account Login ?</a>
+            </div>
         </div>
       </div>
     </>
   )
 }
 
-export default Home
+export default Home;
