@@ -1,8 +1,8 @@
 import React, { use, useState } from 'react'
 import style from '../styles/Home.module.css'
 import Button from '@mui/material/Button';
-import fit from '/assets/fit.png'
-import { useNavigate } from 'react-router-dom';
+import fit from '/assets/fit.webp'
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const Home = () => {
 
@@ -112,7 +112,7 @@ const Home = () => {
               Navigate('/Registration')
             }}
             >Register</Button>
-            <a href="/Login">Already have an account Login ?</a>
+            <NavLink to="/Login">Already have an account Login ?</NavLink>
             </div>
         </div>
       </div>
