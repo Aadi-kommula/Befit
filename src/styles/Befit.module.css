@@ -1,0 +1,143 @@
+.container {
+    text-align: center;
+    background-color: #235c64;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    color: wheat;
+    h1{
+        /* color: #f126b4; */
+        color: wheat;
+        font-size: 35px;
+    }
+}
+
+
+.letstry{
+    padding: 25px;
+    font-size: 29px;
+    text-align: left;
+    text-transform: capitalize;
+    color: wheat;
+}
+
+video {
+    border-radius: 30px;
+    width: 900px;
+}
+video:hover{
+    transition: all 1s ease-in-out;
+    width: 1010px;
+}
+
+.grid {
+    display: grid;
+    margin:0px 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+    justify-content: space-evenly;
+    /* background-color: #3a3d45; */
+    button{
+        margin: 10px 0px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: none;
+        color: #fff;
+        background-color:  rgb(57, 172, 57);
+        outline: none;
+        cursor: pointer;
+    }
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    text-align: left;
+    padding: 0px 0px 10px 20px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+#item_name{
+    text-transform: capitalize;
+    padding:5px 0px;
+}
+
+.card h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+.card p {
+    font-size: 16px;
+    color: #161821;
+    font-weight:500;
+    padding: 2px 0px;
+}
+@keyframes rotate {
+    to{
+        transform: rotate(1turn);
+    }        
+}
+
+#circle{
+    margin-top: 5%; 
+    border-radius: 50%;
+    justify-content: center;
+    text-align: center; 
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border: 5px solid rgba(189,189,189 ,0.25); 
+    border-left-color: rgba(3,155,229 ,1);
+    border-top-color: rgba(3,155,229 ,1);
+    animation: rotate 900ms infinite linear;
+}
+.loading{
+    color: white;
+    justify-content: center;
+    text-align: center; 
+}
+
+/* Mobile CSS */
+@media only screen and (max-width: 500px) {
+
+    .header{
+        h1{
+            font-size: 25px;
+        }
+    }
+    video{
+        border-radius: 10px;
+        width: 400px;
+    }
+    video:hover{
+      width:400px;
+    }
+    
+.letstry{
+    padding: 25px;
+    font-size: 20px;
+    text-align: left;
+    text-transform: capitalize;
+    color: wheat;
+}
+.grid {
+    display: grid;
+    margin:0px 20px;
+    grid-template-columns: auto ;
+    gap: 35px;
+}
+.card{
+    img{
+        width: 340px;
+    }
+}
+}

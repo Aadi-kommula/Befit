@@ -1,14 +1,11 @@
 .container{
     width: 100vw;
     height: 100%;
-    background-color: #f1eded;
     display: flex;
     flex-wrap: wrap;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
    
 }
-
-
 .bmi{
     width:50%;
     /* background-color: #fff; */
@@ -184,10 +181,10 @@ a{
     }
     .bmi{
         width: 100vw;
-        height: 40%;
+        height: 50vh;
         img{
             position: relative;
-            top:-410px;
+            top:-420px;
             left:130px;
             width:340px;
             z-index: 0;
