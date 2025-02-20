@@ -3,7 +3,7 @@ import style from '../styles/Register.module.css'
 import { Button } from '@mui/material'
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { Navigate, NavLink, useNavigate } from 'react-router-dom'
-import { auth } from '../firebase';
+import { auth } from '../Firebase';
 
 const Register = () => {
   const navigate = useNavigate()
