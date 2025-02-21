@@ -4,6 +4,8 @@ import style from '../styles/Explore.module.css';
 
 
 const Explore = () => {
+    const apiKey = import.meta.env.VITE_API_KEY;
+    const databaseUrl = import.meta.env.VITE_DATABASE_URL;
     const [gymdata, setGymdata] = useState([])
     const { id } = useParams();
 
@@ -12,8 +14,8 @@ const Explore = () => {
             const response = await fetch('https://exercisedb.p.rapidapi.com/exercises?limit=10&offset=0', {
                 method: 'GET',
                 headers: {
-                    'x-rapidapi-key': '60864f912bmshe9deecdd6202d52p1b1e7bjsn6a5d9f1f04fb',
-                    'x-rapidapi-host': 'exercisedb.p.rapidapi.com'
+                    'x-rapidapi-key': apiKey,
+                    'x-rapidapi-host': databaseUrl
                 }
             })
 

@@ -4,6 +4,8 @@ import style from '../styles/Befit.module.css';
 
 function Fitzz() {
 
+  const apiKey = import.meta.env.VITE_API_KEY;
+  const databaseUrl = import.meta.env.VITE_DATABASE_URL;
   const [exercises, setExercises] = useState([])
   const navigate = useNavigate();
   const fetchData = async () => {
@@ -11,8 +13,8 @@ function Fitzz() {
       const response = await fetch('https://exercisedb.p.rapidapi.com/exercises?limit=10&offset=0', {
         method: 'GET',
         headers: {
-          'x-rapidapi-key': '60864f912bmshe9deecdd6202d52p1b1e7bjsn6a5d9f1f04fb',
-          'x-rapidapi-host': 'exercisedb.p.rapidapi.com'
+          'x-rapidapi-key': apiKey,
+          'x-rapidapi-host': databaseUrl
         }
       })
 
@@ -50,28 +52,28 @@ function Fitzz() {
         <div className={style.grid}>
           {exercises.length > 0 ? (
             exercises.map((item, index) => (
-              <div 
-              key={index} 
-              className={style.card}
-              onClick={()=>handleNavigate(index)}>
+              <div
+                key={index}
+                className={style.card}
+                onClick={() => handleNavigate(index)}>
 
                 <img src={item.gifUrl} alt="Exercise" />
                 <h3 id={style.item_name}>{item.name}</h3>
                 <p>Body part: {item.bodyPart}</p>
                 <p>Equipment: {item.equipment}</p>
-                <button onClick={()=>handleNavigate(index)}>Explore</button>
-               </div>
+                <button onClick={() => handleNavigate(index)}>Explore</button>
+              </div>
             ))
           ) : (
             <>
-            <span id={style.circle}></span>
-            <p className={style.loading}>Loading the data</p>
+              <span id={style.circle}></span>
+              <p className={style.loading}>Loading the data</p>
             </>
           )}
         </div>
-        <br/> <br/>
+        <br /> <br />
       </div>
-      
+
     </>
   )
 }
